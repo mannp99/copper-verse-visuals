@@ -1,3 +1,4 @@
+
 import type { Config } from "tailwindcss";
 
 export default {
@@ -24,6 +25,30 @@ export default {
 				ring: 'hsl(var(--ring))',
 				background: 'hsl(var(--background))',
 				foreground: 'hsl(var(--foreground))',
+				copper: {
+					50: '#FEF3E9',
+					100: '#FCE7D4',
+					200: '#F8CFA9',
+					300: '#F4B77E',
+					400: '#F09953',
+					500: '#EC7C28',
+					600: '#BD6320',
+					700: '#8F4A18',
+					800: '#603210',
+					900: '#301908',
+				},
+				steel: {
+					50: '#F5F7FA',
+					100: '#EBF0F5',
+					200: '#D7E0EB',
+					300: '#C3D1E0',
+					400: '#AFC2D6',
+					500: '#9BB2CC',
+					600: '#7C8FA3',
+					700: '#5D6B7A',
+					800: '#3E4852',
+					900: '#1F2429',
+				},
 				primary: {
 					DEFAULT: 'hsl(var(--primary))',
 					foreground: 'hsl(var(--primary-foreground))'
@@ -84,11 +109,33 @@ export default {
 					to: {
 						height: '0'
 					}
+				},
+				'fade-in': {
+					'0%': {
+						opacity: '0',
+						transform: 'translateY(10px)'
+					},
+					'100%': {
+						opacity: '1',
+						transform: 'translateY(0)'
+					}
+				},
+				'fade-out': {
+					'0%': {
+						opacity: '1',
+						transform: 'translateY(0)'
+					},
+					'100%': {
+						opacity: '0',
+						transform: 'translateY(10px)'
+					}
 				}
 			},
 			animation: {
 				'accordion-down': 'accordion-down 0.2s ease-out',
-				'accordion-up': 'accordion-up 0.2s ease-out'
+				'accordion-up': 'accordion-up 0.2s ease-out',
+				'fade-in': 'fade-in 0.5s ease-out',
+				'fade-out': 'fade-out 0.5s ease-out'
 			}
 		}
 	},
